@@ -66,7 +66,7 @@ public class MyCharacterController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.X)) {
 			animator.SetTrigger("attack");
 		}
-		if (Input.GetKeyDown(KeyCode.Z)) {
+		if (Input.GetKeyDown(KeyCode.Z) && !jumping) {
 			animator.SetTrigger("jump");
 			preJumpY = transform.position.y;
 			jumpTime = Time.time;
