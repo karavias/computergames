@@ -14,6 +14,7 @@ public class MyCharacterController : MonoBehaviour {
 	float curJumpTime = 1f;
 	GameObject shadow;
 	public float shadowOffset = -1;
+	bool attacking = false;
 	// Use this for initialization
 	void Start () {
 		shadow = GameObject.Find ("shadow");
@@ -63,7 +64,9 @@ public class MyCharacterController : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
 
 		}
-		if (Input.GetKeyDown(KeyCode.X)) {
+		Debug.Log ("Attacking? " + attacking);
+		if (Input.GetKeyDown(KeyCode.X)
+		    && !jumping && !attacking) {
 			animator.SetTrigger("attack");
 		}
 		if (Input.GetKeyDown(KeyCode.Z) && !jumping) {
@@ -73,5 +76,19 @@ public class MyCharacterController : MonoBehaviour {
 			jumping = true;
 			//rigidbody.AddForce(new Vector3(0, jumpForce, 0));
 		}
+	}
+
+	public void AttackStarted() {
+		attacking = true;
+	}
+
+	public void AttackEnded() {
+		Debug.Log ("Ending attack");
+		attacking = false;
+	}
+
+	public void TriggerHitEvent() {
+		GameEventManager.TriggerHitEvent(transform.position, direction, 1);
+
 	}
 }
