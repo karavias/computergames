@@ -10,7 +10,6 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (player.transform.position + " - " + player.name);
 		transform.position = new Vector3 (player.transform.position.x,
 		                                  transform.position.y,
 		                                  transform.position.z);
