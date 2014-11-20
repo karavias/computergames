@@ -21,6 +21,8 @@ public class Destroyable : MonoBehaviour {
 			if (health <= 0) {
 				GameEventManager.HitEvent -= HandleHit;
 				Destroy(gameObject);
+				//todo: play animation for destroying,
+				//and then destroy after 2-3 seconds.
 			}
 		}
 	}

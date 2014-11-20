@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: 11fae079b421dcf4aa95c352a8230207
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 28011_0
+    21300002: 28011_1
+    21300004: 28011_2
+    21300006: 28011_3
+    21300008: 28011_4
+    21300010: 28011_5
+    21300012: 28011_6
+    21300014: 28011_7
+    21300016: 28011_8
+    21300018: 28011_9
+    21300020: 28011_10
+    21300022: 28011_11
+    21300024: 28011_12
+    21300026: 28011_13
+    21300028: 28011_14
+    21300030: 28011_15
+    21300032: 28011_16
+    21300034: 28011_17
+    21300036: 28011_18
+    21300038: 28011_19
+    21300040: 28011_20
+    21300042: 28011_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 28011_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 514
+        width: 162
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 514
+        width: 174
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_2
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 514
+        width: 144
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_3
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 514
+        width: 153
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_4
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 514
+        width: 172
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_5
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 514
+        width: 160
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 346
+        width: 159
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 346
+        width: 167
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 346
+        width: 134
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_9
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 346
+        width: 145
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_10
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 346
+        width: 161
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_11
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 346
+        width: 160
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 172
+        width: 166
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_13
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 296
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_14
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 298
+        width: 58
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_15
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 278
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_16
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 276
+        width: 84
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_17
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 7
+        width: 162
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 7
+        width: 174
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_19
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 7
+        width: 148
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_20
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 7
+        width: 153
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 28011_21
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 7
+        width: 153
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

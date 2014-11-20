@@ -2,6 +2,11 @@
 using System.Collections;
 
 public class MyCharacterController : MonoBehaviour {
+//	- Timer (+ score) 
+//	- Lives
+//	- Player Dies 
+//	- Ritual being disrupted
+//	- Ritual summons boss
 	Animator animator;
 	float scaleX;
 	public float jumpForce = 10f;
@@ -64,7 +69,6 @@ public class MyCharacterController : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
 
 		}
-		Debug.Log ("Attacking? " + attacking);
 		if (Input.GetKeyDown(KeyCode.X)
 		    && !jumping && !attacking) {
 			animator.SetTrigger("attack");
@@ -89,6 +93,12 @@ public class MyCharacterController : MonoBehaviour {
 
 	public void TriggerHitEvent() {
 		GameEventManager.TriggerHitEvent(transform.position, direction, 1);
+	}
 
+	public void OnTriggerEnter2D(Collider2D col) {
+		if (col.gameObject.tag == "RitualRoom") {
+			Debug.Log("Entered ritual room");
+			GameEventManager.TriggerEnteredRitualRoom();
+		}
 	}
 }
