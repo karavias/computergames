@@ -1,0 +1,91 @@
+fileFormatVersion: 2
+guid: ed313970004f3854bb0c64edbbd310a6
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: characterSheet (2)_0
+    21300002: characterSheet (2)_1
+    21300004: characterSheet (2)_2
+    21300006: characterSheet (2)_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: characterSheet (2)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 532
+        width: 259
+        height: 207
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: characterSheet (2)_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 285
+        width: 247
+        height: 213
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: characterSheet (2)_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 286
+        width: 239
+        height: 208
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: characterSheet (2)_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 54
+        width: 304
+        height: 212
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

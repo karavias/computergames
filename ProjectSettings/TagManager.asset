@@ -50,3 +50,7 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: front
+    userID: 2
+    uniqueID: 2147482717
+    locked: 0
