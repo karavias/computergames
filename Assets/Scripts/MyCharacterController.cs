@@ -25,6 +25,8 @@ public class MyCharacterController : MonoBehaviour {
 	GameObject rightest;
 	GameObject leftest;
 
+	public static int coins = 0;
+
 	void Awake() {
 		GameEventManager.ClearAll ();
 	}
@@ -143,6 +145,9 @@ public class MyCharacterController : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D col) {
 		if (col.gameObject.tag == "RitualRoom") {
 			GameEventManager.TriggerEnteredRitualRoom();
+		} else if (col.gameObject.tag == "coin") {
+			coins ++;
+			Destroy(col.gameObject);
 		}
 	}
 }
