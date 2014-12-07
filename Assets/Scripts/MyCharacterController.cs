@@ -24,6 +24,11 @@ public class MyCharacterController : MonoBehaviour {
 	GameObject bottomest;
 	GameObject rightest;
 	GameObject leftest;
+
+	void Awake() {
+		GameEventManager.ClearAll ();
+	}
+
 	// Use this for initialization
 	void Start () {
 		shadow = GameObject.Find ("shadow");
@@ -63,7 +68,7 @@ public class MyCharacterController : MonoBehaviour {
 				new Vector3(
 					transform.position.x + Input.GetAxis ("Horizontal") * speed * Time.deltaTime,
 					preJumpY + jumpForce * Mathf.Sin(2 * Mathf.PI * (Time.time - jumpTime) / (curJumpTime * 2)),
-					transform.position.y
+					0
 					);
 			if (Time.time - jumpTime >= curJumpTime) {
 				jumping = false;
@@ -110,7 +115,7 @@ public class MyCharacterController : MonoBehaviour {
 			animator.SetTrigger("attack");
 		}
 		if (Input.GetKeyDown(KeyCode.Z) && !jumping) {
-			animator.SetTrigger("jump");
+			//animator.SetTrigger("jump");
 			preJumpY = transform.position.y;
 			jumpTime = Time.time;
 			jumping = true;
@@ -128,14 +133,15 @@ public class MyCharacterController : MonoBehaviour {
 	}
 
 	public void TriggerHitEvent() {
+		Debug.Log (transform.position + " --- " + direction);
 		GameEventManager.TriggerHitEvent(transform.position, direction, 1);
 	}
 
 
 
+
 	public void OnTriggerEnter2D(Collider2D col) {
 		if (col.gameObject.tag == "RitualRoom") {
-			Debug.Log("Entered ritual room");
 			GameEventManager.TriggerEnteredRitualRoom();
 		}
 	}
