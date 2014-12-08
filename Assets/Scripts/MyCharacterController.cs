@@ -20,15 +20,39 @@ public class MyCharacterController : MonoBehaviour {
 	GameObject shadow;
 	public float shadowOffset = -1;
 	bool attacking = false;
+	GameObject topest;
+	GameObject bottomest;
+	GameObject rightest;
+	GameObject leftest;
+
+	public static int coins = 0;
+
+	void Awake() {
+		GameEventManager.ClearAll ();
+	}
+
 	// Use this for initialization
 	void Start () {
 		shadow = GameObject.Find ("shadow");
 		scaleX = transform.localScale.x;
 		animator = GetComponent<Animator> ();
+		topest = GameObject.Find ("Topest");
+		bottomest = GameObject.Find ("Bottomest");
+		rightest = GameObject.Find ("RightestCharacter");
+		leftest = GameObject.Find ("LeftestCharacter");
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Instantiate(Resources.Load<GameObject>("pause"),
+			            new Vector3(Camera.main.transform.position.x,
+			            			Camera.main.transform.position.y,
+			            		0)
+			            ,
+			            Quaternion.identity);
+			Time.timeScale = 0;
+		}
 		animator.SetBool ("walk", Input.GetAxis ("Horizontal") != 0
 		                  || Input.GetAxis("Vertical") != 0);
 		float sign;
@@ -46,7 +70,7 @@ public class MyCharacterController : MonoBehaviour {
 				new Vector3(
 					transform.position.x + Input.GetAxis ("Horizontal") * speed * Time.deltaTime,
 					preJumpY + jumpForce * Mathf.Sin(2 * Mathf.PI * (Time.time - jumpTime) / (curJumpTime * 2)),
-					transform.position.y
+					0
 					);
 			if (Time.time - jumpTime >= curJumpTime) {
 				jumping = false;
@@ -57,7 +81,26 @@ public class MyCharacterController : MonoBehaviour {
 			transform.position += new Vector3 (Input.GetAxis ("Horizontal")* speed * Time.deltaTime, 
 			                                   Input.GetAxis ("Vertical") * verticalSpeed * Time.deltaTime
 			                                   , 0); 
-
+			if (transform.position.y > topest.transform.position.y) {
+				transform.position = new Vector3(transform.position.x,
+				                                 topest.transform.position.y,
+				                                 transform.position.z);
+			}
+			if (transform.position.y < bottomest.transform.position.y) {
+				transform.position = new Vector3(transform.position.x,
+				                                 bottomest.transform.position.y,
+				                                 transform.position.z);
+			}
+			if (transform.position.x < leftest.transform.position.x) {
+				transform.position = new Vector3(leftest.transform.position.x,
+				                                 transform.position.y,
+				                                 transform.position.z);
+			}
+			if (transform.position.x > rightest.transform.position.x) {
+				transform.position = new Vector3(rightest.transform.position.x,
+				                                 transform.position.y,
+				                                 transform.position.z);
+			}
 		}
 		collider2D.enabled = !jumping;
 		if (jumping) {
@@ -74,7 +117,7 @@ public class MyCharacterController : MonoBehaviour {
 			animator.SetTrigger("attack");
 		}
 		if (Input.GetKeyDown(KeyCode.Z) && !jumping) {
-			animator.SetTrigger("jump");
+			//animator.SetTrigger("jump");
 			preJumpY = transform.position.y;
 			jumpTime = Time.time;
 			jumping = true;
@@ -92,13 +135,19 @@ public class MyCharacterController : MonoBehaviour {
 	}
 
 	public void TriggerHitEvent() {
+		Debug.Log (transform.position + " --- " + direction);
 		GameEventManager.TriggerHitEvent(transform.position, direction, 1);
 	}
 
+
+
+
 	public void OnTriggerEnter2D(Collider2D col) {
 		if (col.gameObject.tag == "RitualRoom") {
-			Debug.Log("Entered ritual room");
 			GameEventManager.TriggerEnteredRitualRoom();
+		} else if (col.gameObject.tag == "coin") {
+			coins ++;
+			Destroy(col.gameObject);
 		}
 		if (col.gameObject.tag == "Fireball") {
 			Debug.Log ("Iz burning. Oh my gawd!!");
