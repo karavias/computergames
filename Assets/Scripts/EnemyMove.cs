@@ -7,41 +7,102 @@ public class EnemyMove : MonoBehaviour {
 	private GameObject target;
 	public float moveSpeed;
 	private float posY;
-	private float posX; 
+	private float posX;
+	private float aggro = 10.0F;
+	private float attackRange = 5.0F;
+	private bool attacking = false;
+	private float direction = 1;
+	private float scaleX;
+	private bool StopXAxis = false;
+	private bool AttackDelay = false;
+	public GameObject Fireball;
 	// Use this for initialization
 	void Start () {
 		target = GameObject.FindGameObjectWithTag("MyPlayer");
-		moveSpeed = 0.03F;
+		scaleX = transform.localScale.x;
+		moveSpeed = 0.06F;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		float distance = Vector2.Distance (transform.position, target.transform.position);
-		if(distance < 5.0F)
+		if(distance < aggro)
 		{
 			enemyMoveMethod();
+			if(distance < attackRange) 
+			{ 
+				StopXAxis = true;
+				Attack(); 
+			} else {
+				StopXAxis = false;
+			}
 		}
-
+		transform.localScale = new Vector3(direction*scaleX,
+		                                   transform.localScale.y,
+		                                   transform.localScale.z);
+		if(Input.GetKeyDown(KeyCode.F)) {
+			Debug.Log ("aggro: "+aggro + " distance: " + distance + "attackRange: " + attackRange);
+		}
 	}
 
 
 	void enemyMoveMethod() {
-		if(transform.position.y > target.transform.position.y+0.1F) {
+
+		if(transform.position.y > target.transform.position.y+1F) {
 			posY = transform.position.y - (moveSpeed/2);
-			//Debug.Log ("Move down");
+
 		}
-		else if(transform.position.y < target.transform.position.y-0.1F) {
+		else if(transform.position.y < target.transform.position.y+1F) {
 			posY = transform.position.y + (moveSpeed/2);
-			//Debug.Log ("Move up");
+
 		}
-		
+
+
 		if(transform.position.x > target.transform.position.x + 1) {
-			posX = transform.position.x - moveSpeed;
+			if(!StopXAxis) 
+				posX = transform.position.x - moveSpeed;
+			direction = 1;
 		}
 		else if(transform.position.x < target.transform.position.x - 1) {
-			posX = transform.position.x + moveSpeed;
+			if(!StopXAxis) 
+				posX = transform.position.x + moveSpeed;
+			direction = -1;
 		}
+
+
 		transform.position = new Vector3(posX, posY, transform.position.z);
+	}
+
+	void Attack() 
+	{
+		if(!AttackDelay) {
+
+			Debug.Log ("Attacking!");
+
+			StartCoroutine(AttackWait());
+			Destroy(Instantiate(Fireball, transform.position, Quaternion.identity) as GameObject, 5);
+		}
+		
+	}
 	
+	
+	//	public void AttackStarted() {
+//		attacking = true;
+//	}
+//	
+//	public void AttackEnded() {
+//		Debug.Log ("Ending attack");
+//		attacking = false;
+//	}
+	
+	public void TriggerHitEvent() {
+		GameEventManager.TriggerHitEvent(transform.position, direction, 1);
+	}
+
+	IEnumerator AttackWait()
+	{
+		AttackDelay = true;
+		yield return new WaitForSeconds(2.5F);		
+		AttackDelay = false;
 	}
 }

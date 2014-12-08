@@ -100,5 +100,8 @@ public class MyCharacterController : MonoBehaviour {
 			Debug.Log("Entered ritual room");
 			GameEventManager.TriggerEnteredRitualRoom();
 		}
+		if (col.gameObject.tag == "Fireball") {
+			Debug.Log ("Iz burning. Oh my gawd!!");
+		}
 	}
 }

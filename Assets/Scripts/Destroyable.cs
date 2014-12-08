@@ -17,7 +17,7 @@ public class Destroyable : MonoBehaviour {
 		    || (direction < 0 && transform.position.x < pos.x))) {
 			Debug.Log("received a hit");
 			health -= damage;
-			anim.SetTrigger("Hitted");
+			//anim.SetTrigger("Hitted");
 			if (health <= 0) {
 				GameEventManager.HitEvent -= HandleHit;
 				Destroy(gameObject);
