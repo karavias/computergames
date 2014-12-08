@@ -12,8 +12,9 @@ public class Destroyable : MonoBehaviour {
 
 	void HandleHit(Vector3 pos, float direction, float damage) {
 		Debug.Log ("Looking");
-		if (Vector3.Distance(pos, transform.position) < 2
-		    && ((direction > 0 && transform.position.x > pos.x)
+		if (Mathf.Abs (pos.x - transform.position.x) < 2
+		    && Mathf.Abs(pos.y - transform.position.y) < 1
+			&& ((direction > 0 && transform.position.x > pos.x)
 		    || (direction < 0 && transform.position.x < pos.x))) {
 			Debug.Log("received a hit");
 			health -= damage;

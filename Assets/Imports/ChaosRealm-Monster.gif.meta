@@ -1,0 +1,1048 @@
+fileFormatVersion: 2
+guid: dd9f790d7f0749c41ab3f5dd1d33918d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ChaosRealm-Monster_0
+    21300002: ChaosRealm-Monster_1
+    21300004: ChaosRealm-Monster_2
+    21300006: ChaosRealm-Monster_3
+    21300008: ChaosRealm-Monster_4
+    21300010: ChaosRealm-Monster_5
+    21300012: ChaosRealm-Monster_6
+    21300014: ChaosRealm-Monster_7
+    21300016: ChaosRealm-Monster_8
+    21300018: ChaosRealm-Monster_9
+    21300020: ChaosRealm-Monster_10
+    21300022: ChaosRealm-Monster_11
+    21300024: ChaosRealm-Monster_12
+    21300026: ChaosRealm-Monster_13
+    21300028: ChaosRealm-Monster_14
+    21300030: ChaosRealm-Monster_15
+    21300032: ChaosRealm-Monster_16
+    21300034: ChaosRealm-Monster_17
+    21300036: ChaosRealm-Monster_18
+    21300038: ChaosRealm-Monster_19
+    21300040: ChaosRealm-Monster_20
+    21300042: ChaosRealm-Monster_21
+    21300044: ChaosRealm-Monster_22
+    21300046: ChaosRealm-Monster_23
+    21300048: ChaosRealm-Monster_24
+    21300050: ChaosRealm-Monster_25
+    21300052: ChaosRealm-Monster_26
+    21300054: ChaosRealm-Monster_27
+    21300056: ChaosRealm-Monster_28
+    21300058: ChaosRealm-Monster_29
+    21300060: ChaosRealm-Monster_30
+    21300062: ChaosRealm-Monster_31
+    21300064: ChaosRealm-Monster_32
+    21300066: ChaosRealm-Monster_33
+    21300068: ChaosRealm-Monster_34
+    21300070: ChaosRealm-Monster_35
+    21300072: ChaosRealm-Monster_36
+    21300074: ChaosRealm-Monster_37
+    21300076: ChaosRealm-Monster_38
+    21300078: ChaosRealm-Monster_39
+    21300080: ChaosRealm-Monster_40
+    21300082: ChaosRealm-Monster_41
+    21300084: ChaosRealm-Monster_42
+    21300086: ChaosRealm-Monster_43
+    21300088: ChaosRealm-Monster_44
+    21300090: ChaosRealm-Monster_45
+    21300092: ChaosRealm-Monster_46
+    21300094: ChaosRealm-Monster_47
+    21300096: ChaosRealm-Monster_48
+    21300098: ChaosRealm-Monster_49
+    21300100: ChaosRealm-Monster_50
+    21300102: ChaosRealm-Monster_51
+    21300104: ChaosRealm-Monster_52
+    21300106: ChaosRealm-Monster_53
+    21300108: ChaosRealm-Monster_54
+    21300110: ChaosRealm-Monster_55
+    21300112: ChaosRealm-Monster_56
+    21300114: ChaosRealm-Monster_57
+    21300116: ChaosRealm-Monster_58
+    21300118: ChaosRealm-Monster_59
+    21300120: ChaosRealm-Monster_60
+    21300122: ChaosRealm-Monster_61
+    21300124: ChaosRealm-Monster_62
+    21300126: ChaosRealm-Monster_63
+    21300128: ChaosRealm-Monster_64
+    21300130: ChaosRealm-Monster_65
+    21300132: ChaosRealm-Monster_66
+    21300134: ChaosRealm-Monster_67
+    21300136: ChaosRealm-Monster_68
+    21300138: ChaosRealm-Monster_69
+    21300140: ChaosRealm-Monster_70
+    21300142: ChaosRealm-Monster_71
+    21300144: ChaosRealm-Monster_72
+    21300146: ChaosRealm-Monster_73
+    21300148: ChaosRealm-Monster_74
+    21300150: ChaosRealm-Monster_75
+    21300152: ChaosRealm-Monster_76
+    21300154: ChaosRealm-Monster_77
+    21300156: ChaosRealm-Monster_78
+    21300158: ChaosRealm-Monster_79
+    21300160: ChaosRealm-Monster_80
+    21300162: ChaosRealm-Monster_81
+    21300164: ChaosRealm-Monster_82
+    21300166: ChaosRealm-Monster_83
+    21300168: ChaosRealm-Monster_84
+    21300170: ChaosRealm-Monster_85
+    21300172: ChaosRealm-Monster_86
+    21300174: ChaosRealm-Monster_87
+    21300176: ChaosRealm-Monster_88
+    21300178: ChaosRealm-Monster_89
+    21300180: ChaosRealm-Monster_90
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ChaosRealm-Monster_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 357
+        width: 16
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 355
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 357
+        width: 16
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 355
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 354
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 355
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_6
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 330
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_7
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 330
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_8
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 330
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 330
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_10
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 330
+        width: 24
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_11
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 330
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 340
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_14
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 340
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_15
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 340
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_16
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 340
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_17
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 340
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 314
+        width: 15
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_19
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 315
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_20
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 314
+        width: 13
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 314
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_22
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 316
+        width: 16
+        height: 12
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_23
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 290
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_24
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 290
+        width: 23
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_25
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 290
+        width: 20
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_26
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 290
+        width: 23
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_27
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 290
+        width: 22
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_28
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 290
+        width: 20
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 15
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_30
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 300
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_31
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 300
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_32
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 300
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_33
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 300
+        width: 16
+        height: 7
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_35
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 260
+        width: 19
+        height: 25
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_36
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 260
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_37
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 248
+        width: 33
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_38
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 280
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_39
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 248
+        width: 22
+        height: 37
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_40
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 248
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_42
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 223
+        width: 21
+        height: 27
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_43
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 223
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_44
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 200
+        width: 17
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_45
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 199
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_46
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 199
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_47
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 199
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_48
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 200
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_49
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 199
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 189
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_51
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 188
+        width: 21
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_52
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 188
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_53
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 160
+        width: 16
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_54
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 160
+        width: 16
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_55
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 160
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_56
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 160
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_57
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 160
+        width: 16
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_58
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 160
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_60
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 153
+        width: 21
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_61
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 153
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_62
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 123
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_63
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 124
+        width: 21
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_64
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 123
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_65
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 123
+        width: 31
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 119
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_67
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 118
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_68
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 117
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_69
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 80
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_70
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 80
+        width: 16
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_71
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 80
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_72
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 80
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_73
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 80
+        width: 16
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_74
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 80
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_75
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 80
+        width: 9
+        height: 13
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_76
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 80
+        width: 9
+        height: 13
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_77
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 80
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_78
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 85
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_79
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 80
+        width: 16
+        height: 23
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_80
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 4
+        height: 5
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_81
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 40
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_82
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 40
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_83
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 40
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_84
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 40
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_85
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 40
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_86
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 40
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_87
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_88
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 19
+        height: 31
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_89
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 19
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ChaosRealm-Monster_90
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
