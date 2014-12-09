@@ -32,3 +32,31 @@ Thumbs.db
 Assets/Scripts/Destroyable.cs
 
 ProjectSettings/TagManager.asset
+
+Assets/Scripts/Destroyable.cs
+
+*.mat
+
+*.mat
+
+Assets/Standard Assets/Skyboxes/DawnDusk Skybox.mat
+
+Assets/Standard Assets/Skyboxes/Eerie Skybox.mat
+
+Assets/Standard Assets/Skyboxes/MoonShine Skybox.mat
+
+Assets/Standard Assets/Skyboxes/Overcast1 Skybox.mat
+
+Assets/Standard Assets/Skyboxes/Overcast2 Skybox.mat
+
+Assets/Standard Assets/Skyboxes/StarryNight Skybox.mat
+
+Assets/Standard Assets/Skyboxes/Sunny1 Skybox.mat
+
+Assets/Standard Assets/Skyboxes/Sunny2 Skybox.mat
+
+Assets/Standard Assets/Skyboxes/Sunny3 Skybox.mat
+
+ProjectSettings/GraphicsSettings.asset
+
+ProjectSettings/TagManager.asset
