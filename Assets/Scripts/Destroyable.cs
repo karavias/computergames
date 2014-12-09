@@ -6,6 +6,7 @@ public class Destroyable : MonoBehaviour {
 	public float health = 5;
 	Animator anim;
 	float initialMax;
+	public bool throwItem = false;
 	void Start() {
 		anim = GetComponent<Animator> ();
 		GameEventManager.HitEvent += HandleHit;
@@ -27,6 +28,16 @@ public class Destroyable : MonoBehaviour {
 			                    , Quaternion.identity), 0.4f);
 			if (health <= 0) {
 				GameEventManager.HitEvent -= HandleHit;
+				if (throwItem) {
+					int roll = Random.Range(0, 100);
+					if (roll < 30) {
+						Instantiate(Resources.Load<GameObject>("1"), transform.position, Quaternion.identity);
+					} else if (roll < 50) {
+						Instantiate(Resources.Load<GameObject>("2"), transform.position, Quaternion.identity);
+					} else if (roll < 50) {
+						Instantiate(Resources.Load<GameObject>("3"), transform.position, Quaternion.identity);
+					}
+				}
 				Destroy(gameObject);
 				//todo: play animation for destroying,
 				//and then destroy after 2-3 seconds.

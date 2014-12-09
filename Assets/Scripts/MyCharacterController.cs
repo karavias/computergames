@@ -155,16 +155,27 @@ public class MyCharacterController : MonoBehaviour {
 		if (col.gameObject.tag == "Fireball") {
 			applyDamage(1);
 		}
+		if (col.gameObject.tag == "healthup") {
+			applyDamage(-1);
+			Destroy(col.gameObject);
+		}
 	}
 
 	public void applyDamage(int damage) {
 		health -= damage;
+		if (health > maxHealth) {
+			health = maxHealth;
+		}
+		if (health < 0) {
+			health = 0;
+		}
 		Debug.Log("received hit : " + health);
 		healthIndicator.localScale = new Vector3(
 			(health/maxHealth) * healthIndicatorX,
 			healthIndicator.localScale.y,
 			healthIndicator.localScale.z
 			);
+
 		if (health <= 0) {
 			Destroy(gameObject);
 		}
