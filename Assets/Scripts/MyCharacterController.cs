@@ -12,34 +12,38 @@ public class MyCharacterController : MonoBehaviour {
 	public float jumpForce = 10f;
 	public float speed = 1f;
 	public float verticalSpeed = 1f;
-	float direction = 1;
+	public float direction = 1;
 	float preJumpY;
 	float jumpTime;
 	bool jumping = false;
 	float curJumpTime = 1f;
-	GameObject shadow;
-	public float shadowOffset = -1;
 	bool attacking = false;
 	GameObject topest;
 	GameObject bottomest;
 	GameObject rightest;
 	GameObject leftest;
-
+	public float maxHealth;
+	public float health;
 	public static int coins = 0;
-
+	Transform healthIndicator;
+	float healthIndicatorX;
 	void Awake() {
 		GameEventManager.ClearAll ();
 	}
 
 	// Use this for initialization
 	void Start () {
-		shadow = GameObject.Find ("shadow");
+
+		health = maxHealth;
 		scaleX = transform.localScale.x;
-		animator = GetComponent<Animator> ();
+		animator = GetComponentInChildren<Animator> ();
 		topest = GameObject.Find ("Topest");
 		bottomest = GameObject.Find ("Bottomest");
 		rightest = GameObject.Find ("RightestCharacter");
 		leftest = GameObject.Find ("LeftestCharacter");
+		healthIndicator = transform.FindChild("healthbar").FindChild ("indicator");
+		healthIndicatorX = healthIndicator.localScale.x;
+
 	}
 	
 	// Update is called once per frame
@@ -104,12 +108,10 @@ public class MyCharacterController : MonoBehaviour {
 		}
 		collider2D.enabled = !jumping;
 		if (jumping) {
-			shadow.transform.position = new Vector3 (transform.position.x, preJumpY + shadowOffset, -1);
-			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(preJumpY * 100);
+			GetComponentInChildren<SpriteRenderer> ().sortingOrder = 1000 - (int)(preJumpY * 100);
 
 		} else {
-			shadow.transform.position = new Vector3 (transform.position.x, transform.position.y + shadowOffset, -1);
-			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
+			GetComponentInChildren<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
 
 		}
 		if (Input.GetKeyDown(KeyCode.X)
@@ -143,6 +145,7 @@ public class MyCharacterController : MonoBehaviour {
 
 
 	public void OnTriggerEnter2D(Collider2D col) {
+		Debug.Log ("Triggered from " + col.gameObject.tag);
 		if (col.gameObject.tag == "RitualRoom") {
 			GameEventManager.TriggerEnteredRitualRoom();
 		} else if (col.gameObject.tag == "coin") {
@@ -150,7 +153,38 @@ public class MyCharacterController : MonoBehaviour {
 			Destroy(col.gameObject);
 		}
 		if (col.gameObject.tag == "Fireball") {
-			Debug.Log ("Iz burning. Oh my gawd!!");
+			applyDamage(1);
 		}
 	}
+
+	public void applyDamage(int damage) {
+		health -= damage;
+		Debug.Log("received hit : " + health);
+		healthIndicator.localScale = new Vector3(
+			(health/maxHealth) * healthIndicatorX,
+			healthIndicator.localScale.y,
+			healthIndicator.localScale.z
+			);
+		if (health <= 0) {
+			Destroy(gameObject);
+		}
+	}
+
+	public void OnCollisionEnter2D(Collision2D col) {
+		if (col.gameObject.tag == "Fireball") {
+			health--;
+			Debug.Log("received hit : " + health);
+			healthIndicator.localScale = new Vector3(
+				(health/maxHealth) * healthIndicatorX,
+				healthIndicator.localScale.y,
+				healthIndicator.localScale.z
+				);
+			Destroy(col.gameObject);
+			if (health == 0) {
+				Destroy(gameObject);
+			}
+		}
+	}
+
+
 }

@@ -9,12 +9,13 @@ public class EnemyMove : MonoBehaviour {
 	private float posY;
 	private float posX;
 	private float aggro = 10.0F;
-	private float attackRange = 5.0F;
+	public float attackRange = 5.0F;
 	private bool attacking = false;
 	private float direction = 1;
 	private float scaleX;
 	private bool StopXAxis = false;
 	private bool AttackDelay = false;
+	public float tta = 2.5f;
 	public GameObject Fireball;
 	// Use this for initialization
 	void Start () {
@@ -48,11 +49,11 @@ public class EnemyMove : MonoBehaviour {
 
 	void enemyMoveMethod() {
 
-		if(transform.position.y > target.transform.position.y+1F) {
+		if(transform.position.y > target.transform.position.y) {
 			posY = transform.position.y - (moveSpeed/2);
 
 		}
-		else if(transform.position.y < target.transform.position.y+1F) {
+		else if(transform.position.y < target.transform.position.y) {
 			posY = transform.position.y + (moveSpeed/2);
 
 		}
@@ -80,7 +81,11 @@ public class EnemyMove : MonoBehaviour {
 			Debug.Log ("Attacking!");
 
 			StartCoroutine(AttackWait());
-			Destroy(Instantiate(Fireball, transform.position, Quaternion.identity) as GameObject, 5);
+			if (Fireball != null) {
+				Destroy(Instantiate(Fireball, transform.position, Quaternion.identity) as GameObject, 5);
+			} else {
+				GetComponentInChildren<Animator>().SetTrigger("hit");
+			}
 		}
 		
 	}
@@ -96,13 +101,14 @@ public class EnemyMove : MonoBehaviour {
 //	}
 	
 	public void TriggerHitEvent() {
-		GameEventManager.TriggerHitEvent(transform.position, direction, 1);
+
+	//	GameEventManager.TriggerHitEvent(transform.position, direction, 1);
 	}
 
 	IEnumerator AttackWait()
 	{
 		AttackDelay = true;
-		yield return new WaitForSeconds(2.5F);		
+		yield return new WaitForSeconds(tta);		
 		AttackDelay = false;
 	}
 }

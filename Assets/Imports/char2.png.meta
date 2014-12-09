@@ -1,0 +1,861 @@
+fileFormatVersion: 2
+guid: 9248482d3842c5e4d8f37bdb6ca5528c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: char2_0
+    21300002: char2_1
+    21300004: char2_2
+    21300006: char2_3
+    21300008: char2_4
+    21300010: char2_5
+    21300012: char2_6
+    21300014: char2_7
+    21300016: char2_8
+    21300018: char2_9
+    21300020: char2_10
+    21300022: char2_11
+    21300024: char2_12
+    21300026: char2_13
+    21300028: char2_14
+    21300030: char2_15
+    21300032: char2_16
+    21300034: char2_17
+    21300036: char2_18
+    21300038: char2_19
+    21300040: char2_20
+    21300042: char2_21
+    21300044: char2_22
+    21300046: char2_23
+    21300048: char2_24
+    21300050: char2_25
+    21300052: char2_26
+    21300054: char2_27
+    21300056: char2_28
+    21300058: char2_29
+    21300060: char2_30
+    21300062: char2_31
+    21300064: char2_32
+    21300066: char2_33
+    21300068: char2_34
+    21300070: char2_35
+    21300072: char2_36
+    21300074: char2_37
+    21300076: char2_38
+    21300078: char2_39
+    21300080: char2_40
+    21300082: char2_41
+    21300084: char2_42
+    21300086: char2_43
+    21300088: char2_44
+    21300090: char2_45
+    21300092: char2_46
+    21300094: char2_47
+    21300096: char2_48
+    21300098: char2_49
+    21300100: char2_50
+    21300102: char2_51
+    21300104: char2_52
+    21300106: char2_53
+    21300108: char2_54
+    21300110: char2_55
+    21300112: char2_56
+    21300114: char2_57
+    21300116: char2_58
+    21300118: char2_59
+    21300120: char2_60
+    21300122: char2_61
+    21300124: char2_62
+    21300126: char2_63
+    21300128: char2_64
+    21300130: char2_65
+    21300132: char2_66
+    21300134: char2_67
+    21300136: char2_68
+    21300138: char2_69
+    21300140: char2_70
+    21300142: char2_71
+    21300144: char2_72
+    21300146: char2_73
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: char2_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 936
+        width: 40
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 936
+        width: 44
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 936
+        width: 48
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 936
+        width: 37
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_4
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 936
+        width: 44
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_5
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 936
+        width: 49
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 936
+        width: 48
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 936
+        width: 69
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_8
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 936
+        width: 64
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_9
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 936
+        width: 65
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 832
+        width: 57
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 832
+        width: 48
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_12
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 832
+        width: 34
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_13
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 832
+        width: 38
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_14
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 832
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_15
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 832
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_16
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 832
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_17
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 832
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_18
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 832
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_19
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 832
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_20
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 832
+        width: 77
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_21
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 744
+        width: 47
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_22
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 744
+        width: 49
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_23
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 744
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_24
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 744
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_25
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 744
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_26
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 744
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_27
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 744
+        width: 52
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_28
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 744
+        width: 81
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_29
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 640
+        width: 63
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_30
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 640
+        width: 76
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_31
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 640
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 640
+        width: 56
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_33
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 640
+        width: 49
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_34
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 640
+        width: 58
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_35
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 640
+        width: 50
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_36
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 536
+        width: 91
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_37
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 536
+        width: 89
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_38
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 536
+        width: 55
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_39
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 536
+        width: 49
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_40
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 536
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_41
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 536
+        width: 39
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_42
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 536
+        width: 58
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_43
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 464
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_44
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 464
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_45
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 464
+        width: 66
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_46
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 464
+        width: 87
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_47
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 464
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_48
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 464
+        width: 89
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_49
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 360
+        width: 79
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_50
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 360
+        width: 76
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_51
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 360
+        width: 71
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_52
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 360
+        width: 26
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_53
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 360
+        width: 50
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_54
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 360
+        width: 63
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_55
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 360
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_56
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 360
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_57
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 232
+        width: 64
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_58
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 232
+        width: 50
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_59
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 232
+        width: 40
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_60
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 232
+        width: 79
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_61
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 232
+        width: 88
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_62
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 232
+        width: 57
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_63
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 232
+        width: 66
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_64
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 128
+        width: 65
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_65
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 128
+        width: 57
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_66
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 128
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_67
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 128
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_68
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 128
+        width: 105
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_69
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 128
+        width: 56
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_70
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 128
+        width: 53
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_71
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 128
+        width: 56
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_72
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 55
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: char2_73
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 8
+        width: 48
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

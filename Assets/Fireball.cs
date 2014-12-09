@@ -16,6 +16,9 @@ public class Fireball : MonoBehaviour {
 			//shoot left
 			direction = -1;
 		}
+		transform.localScale = new Vector3 (-direction * transform.localScale.x,
+		                                   transform.localScale.y,
+		                                   transform.localScale.z);
 	}
 	
 	// Update is called once per frame
