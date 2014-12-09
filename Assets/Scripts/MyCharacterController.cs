@@ -27,13 +27,13 @@ public class MyCharacterController : MonoBehaviour {
 	public static int coins = 0;
 	Transform healthIndicator;
 	float healthIndicatorX;
+
 	void Awake() {
 		GameEventManager.ClearAll ();
 	}
 
 	// Use this for initialization
 	void Start () {
-
 		health = maxHealth;
 		scaleX = transform.localScale.x;
 		animator = GetComponentInChildren<Animator> ();
@@ -163,6 +163,14 @@ public class MyCharacterController : MonoBehaviour {
 
 	public void applyDamage(int damage) {
 		health -= damage;
+		if (damage > 0) {
+			Destroy(Instantiate(Resources.Load<GameObject>("pow"), 
+			                    transform.position +
+			                    new Vector3(Random.Range(-0.2f, 0.2f),
+			            0.5f + Random.Range(-0.1f, 0.2f),
+			            0)
+			                    , Quaternion.identity), 0.4f);
+		}
 		if (health > maxHealth) {
 			health = maxHealth;
 		}

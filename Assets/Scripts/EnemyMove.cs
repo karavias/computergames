@@ -17,15 +17,28 @@ public class EnemyMove : MonoBehaviour {
 	private bool AttackDelay = false;
 	public float tta = 2.5f;
 	public GameObject Fireball;
+	public float dizzy = 0;
+	public int initialDizzyFactor = 2;
+	int dizzyFactor;
+
 	// Use this for initialization
 	void Start () {
+		dizzyFactor = initialDizzyFactor;
+
 		target = GameObject.FindGameObjectWithTag("MyPlayer");
 		scaleX = transform.localScale.x;
 		moveSpeed = 0.06F;
+		GameEventManager.HitEvent += HandleHit;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (dizzy > 0) {
+			dizzy -= Time.deltaTime;
+			return;
+		}
+
 		float distance = Vector2.Distance (transform.position, target.transform.position);
 		if(distance < aggro)
 		{
@@ -110,5 +123,26 @@ public class EnemyMove : MonoBehaviour {
 		AttackDelay = true;
 		yield return new WaitForSeconds(tta);		
 		AttackDelay = false;
+	}
+
+	void HandleHit(Vector3 pos, float direction, float damage) {
+		if (Mathf.Abs (pos.x - transform.position.x) < 2
+		    && Mathf.Abs(pos.y - transform.position.y) < 1
+		    && ((direction > 0 && transform.position.x > pos.x)
+		    || (direction < 0 && transform.position.x < pos.x))) {
+			dizzyFactor--;
+			if (dizzyFactor == 0) {
+				dizzy = 2f;
+				Destroy(
+				Instantiate(Resources.Load<GameObject>("dizzy"), transform.position - new Vector3(0, -2, 0), Quaternion.identity),
+					1.8f);
+				dizzyFactor = initialDizzyFactor;
+
+			}
+		}
+	}
+
+	void OnDestroy() {
+		GameEventManager.HitEvent -= HandleHit;
 	}
 }

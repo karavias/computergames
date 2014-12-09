@@ -7,7 +7,10 @@ public class ZFixer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (child) {
-			GetComponentInChildren<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
+			
+			foreach (SpriteRenderer rend in GetComponentsInChildren<SpriteRenderer>()) {
+				rend.sortingOrder = 1000 - (int)(transform.position.y * 100);	
+			}		
 		} else {
 			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
 		}
@@ -19,8 +22,12 @@ public class ZFixer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (child) {
-			GetComponentInChildren<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
+
+			foreach (SpriteRenderer rend in GetComponentsInChildren<SpriteRenderer>()) {
+				rend.sortingOrder = 1000 - (int)(transform.position.y * 100);	
+			}
 		} else {
+
 			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
 		}
 	}
