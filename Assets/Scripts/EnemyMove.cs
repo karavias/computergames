@@ -19,6 +19,7 @@ public class EnemyMove : MonoBehaviour {
 	public GameObject Fireball;
 	public float dizzy = 0;
 	public int initialDizzyFactor = 2;
+	public bool animate = false;
 	int dizzyFactor;
 
 	// Use this for initialization
@@ -38,7 +39,9 @@ public class EnemyMove : MonoBehaviour {
 			dizzy -= Time.deltaTime;
 			return;
 		}
-
+		if (target == null || target.Equals(null)) {
+			return;
+		}
 		float distance = Vector2.Distance (transform.position, target.transform.position);
 		if(distance < aggro)
 		{
@@ -95,6 +98,10 @@ public class EnemyMove : MonoBehaviour {
 
 			StartCoroutine(AttackWait());
 			if (Fireball != null) {
+				if (animate) {
+					GetComponentInChildren<Animator>().SetTrigger("hit");
+
+				}
 				Destroy(Instantiate(Fireball, transform.position, Quaternion.identity) as GameObject, 5);
 			} else {
 				GetComponentInChildren<Animator>().SetTrigger("hit");

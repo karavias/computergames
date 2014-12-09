@@ -185,6 +185,10 @@ public class MyCharacterController : MonoBehaviour {
 			);
 
 		if (health <= 0) {
+			Instantiate(Resources.Load<GameObject>("gameover"), new Vector3(Camera.main.transform.position.x,
+			                                                                Camera.main.transform.position.y,
+			                                                                0),
+			            Quaternion.identity);
 			Destroy(gameObject);
 		}
 	}
