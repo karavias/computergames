@@ -125,6 +125,11 @@ public class MyCharacterController : MonoBehaviour {
 			jumping = true;
 			//rigidbody.AddForce(new Vector3(0, jumpForce, 0));
 		}
+		healthIndicator.localScale = new Vector3(
+			(health/maxHealth) * healthIndicatorX,
+			healthIndicator.localScale.y,
+			healthIndicator.localScale.z
+			);
 	}
 
 	public void AttackStarted() {
@@ -145,7 +150,6 @@ public class MyCharacterController : MonoBehaviour {
 
 
 	public void OnTriggerEnter2D(Collider2D col) {
-		Debug.Log ("Triggered from " + col.gameObject.tag);
 		if (col.gameObject.tag == "RitualRoom") {
 			GameEventManager.TriggerEnteredRitualRoom();
 		} else if (col.gameObject.tag == "coin") {
@@ -178,11 +182,7 @@ public class MyCharacterController : MonoBehaviour {
 			health = 0;
 		}
 		Debug.Log("received hit : " + health);
-		healthIndicator.localScale = new Vector3(
-			(health/maxHealth) * healthIndicatorX,
-			healthIndicator.localScale.y,
-			healthIndicator.localScale.z
-			);
+
 
 		if (health <= 0) {
 			Instantiate(Resources.Load<GameObject>("gameover"), new Vector3(Camera.main.transform.position.x,
