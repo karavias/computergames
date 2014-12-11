@@ -24,16 +24,23 @@ public class MyCharacterController : MonoBehaviour {
 	GameObject leftest;
 	public float maxHealth;
 	public float health;
-	public static int coins = 0;
 	Transform healthIndicator;
 	float healthIndicatorX;
-
+	Transform bodyRoot;
+	GUIText helpText;
+	bool canShop;
+	GameObject shop;
+	Transform power;
 	void Awake() {
 		GameEventManager.ClearAll ();
 	}
 
 	// Use this for initialization
 	void Start () {
+		canShop = false;
+		shop = null;
+		bodyRoot = transform.FindChild ("bodyRoot");
+		maxHealth = maxHealth + Upgrades.health * 2;
 		health = maxHealth;
 		scaleX = transform.localScale.x;
 		animator = GetComponentInChildren<Animator> ();
@@ -41,13 +48,42 @@ public class MyCharacterController : MonoBehaviour {
 		bottomest = GameObject.Find ("Bottomest");
 		rightest = GameObject.Find ("RightestCharacter");
 		leftest = GameObject.Find ("LeftestCharacter");
-		healthIndicator = transform.FindChild("healthbar").FindChild ("indicator");
+		healthIndicator = transform.FindChild("bodyRoot").FindChild("healthbar").FindChild ("indicator");
 		healthIndicatorX = healthIndicator.localScale.x;
-
+		helpText = GameObject.Find ("helpText").GetComponent<GUIText>();
+		power = bodyRoot.FindChild ("power");
+		UpdatePowerColor ();
 	}
-	
+
+	public void UpgradeHealth() {
+		maxHealth = 10 + Upgrades.health * 2;
+		health = maxHealth;
+		UpdatePowerColor ();
+	}
+
+	public void UpdatePowerColor() {
+		power.particleSystem.startSize = (Upgrades.health + Upgrades.damage) * 0.05f;
+	}
+
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown(KeyCode.C) && canShop && shop == null) {
+			shop = Instantiate(Resources.Load<GameObject>("upgradesShop"), new Vector3(Camera.main.transform.position.x,
+			                                                                    Camera.main.transform.position.y,
+			                                                                    0),
+			            Quaternion.identity) as GameObject;
+			return;
+		} else if (Input.GetKeyDown(KeyCode.C) && shop != null) {
+			canShop = true;
+			Destroy(shop);
+			shop = null;
+
+
+		} else if (shop != null) {
+			return;
+		}
+
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			Instantiate(Resources.Load<GameObject>("pause"),
 			            new Vector3(Camera.main.transform.position.x,
@@ -69,58 +105,55 @@ public class MyCharacterController : MonoBehaviour {
 		                                   transform.localScale.y,
 		                                   transform.localScale.z);
 		if (jumping) {
-			preJumpY += Input.GetAxis ("Vertical") * verticalSpeed * Time.deltaTime;
-			transform.position = 
+			bodyRoot.localPosition = 
 				new Vector3(
-					transform.position.x + Input.GetAxis ("Horizontal") * speed * Time.deltaTime,
+					0,
 					preJumpY + jumpForce * Mathf.Sin(2 * Mathf.PI * (Time.time - jumpTime) / (curJumpTime * 2)),
 					0
 					);
 			if (Time.time - jumpTime >= curJumpTime) {
 				jumping = false;
-			}
-
-
-		} else {
-			transform.position += new Vector3 (Input.GetAxis ("Horizontal")* speed * Time.deltaTime, 
-			                                   Input.GetAxis ("Vertical") * verticalSpeed * Time.deltaTime
-			                                   , 0); 
-			if (transform.position.y > topest.transform.position.y) {
-				transform.position = new Vector3(transform.position.x,
-				                                 topest.transform.position.y,
-				                                 transform.position.z);
-			}
-			if (transform.position.y < bottomest.transform.position.y) {
-				transform.position = new Vector3(transform.position.x,
-				                                 bottomest.transform.position.y,
-				                                 transform.position.z);
-			}
-			if (transform.position.x < leftest.transform.position.x) {
-				transform.position = new Vector3(leftest.transform.position.x,
-				                                 transform.position.y,
-				                                 transform.position.z);
-			}
-			if (transform.position.x > rightest.transform.position.x) {
-				transform.position = new Vector3(rightest.transform.position.x,
-				                                 transform.position.y,
-				                                 transform.position.z);
+				bodyRoot.localPosition = new Vector3(0, preJumpY, 0);
 			}
 		}
-		collider2D.enabled = !jumping;
-		if (jumping) {
-			GetComponentInChildren<SpriteRenderer> ().sortingOrder = 1000 - (int)(preJumpY * 100);
-
-		} else {
-			GetComponentInChildren<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
-
+		transform.position += new Vector3 (Input.GetAxis ("Horizontal")* speed * Time.deltaTime, 
+		                                   Input.GetAxis ("Vertical") * verticalSpeed * Time.deltaTime
+		                                   , 0); 
+		if (transform.position.y > topest.transform.position.y) {
+			transform.position = new Vector3(transform.position.x,
+			                                 topest.transform.position.y,
+			                                 transform.position.z);
 		}
-		if (Input.GetKeyDown(KeyCode.X)
-		    && !jumping && !attacking) {
+		if (transform.position.y < bottomest.transform.position.y) {
+			transform.position = new Vector3(transform.position.x,
+			                                 bottomest.transform.position.y,
+			                                 transform.position.z);
+		}
+		if (transform.position.x < leftest.transform.position.x) {
+			transform.position = new Vector3(leftest.transform.position.x,
+			                                 transform.position.y,
+			                                 transform.position.z);
+		}
+		if (transform.position.x > rightest.transform.position.x) {
+			transform.position = new Vector3(rightest.transform.position.x,
+			                                 transform.position.y,
+			                                 transform.position.z);
+		}
+
+		//collider2D.enabled = !jumping;
+		foreach (SpriteRenderer rend in GetComponentsInChildren<SpriteRenderer>()) {
+			rend.sortingOrder = 1000 - (int)(transform.position.y * 100);
+			power.renderer.sortingOrder = rend.sortingOrder;
+		}
+
+
+
+		if (Input.GetKeyDown(KeyCode.X) && !attacking) {
 			animator.SetTrigger("attack");
 		}
 		if (Input.GetKeyDown(KeyCode.Z) && !jumping) {
 			//animator.SetTrigger("jump");
-			preJumpY = transform.position.y;
+			preJumpY = bodyRoot.localPosition.y;
 			jumpTime = Time.time;
 			jumping = true;
 			//rigidbody.AddForce(new Vector3(0, jumpForce, 0));
@@ -130,6 +163,7 @@ public class MyCharacterController : MonoBehaviour {
 			healthIndicator.localScale.y,
 			healthIndicator.localScale.z
 			);
+
 	}
 
 	public void AttackStarted() {
@@ -150,18 +184,36 @@ public class MyCharacterController : MonoBehaviour {
 
 
 	public void OnTriggerEnter2D(Collider2D col) {
+
 		if (col.gameObject.tag == "RitualRoom") {
+			if (jumping) {
+				return;
+			}
 			GameEventManager.TriggerEnteredRitualRoom();
 		} else if (col.gameObject.tag == "coin") {
-			coins ++;
+			Upgrades.AddCoin();
 			Destroy(col.gameObject);
 		}
 		if (col.gameObject.tag == "Fireball") {
+			if (jumping) {
+				return;
+			}
 			applyDamage(1);
 		}
 		if (col.gameObject.tag == "healthup") {
 			applyDamage(-1);
 			Destroy(col.gameObject);
+		}
+		if (col.gameObject.tag == "seller") {
+			canShop = true;
+			helpText.text = "Press C to buy upgrades";
+		}
+	}
+
+	public void OnTriggerExit2D(Collider2D col) {
+		if (col.gameObject.tag == "seller") {
+			helpText.text = "";
+			canShop = false;
 		}
 	}
 
@@ -194,18 +246,8 @@ public class MyCharacterController : MonoBehaviour {
 	}
 
 	public void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.tag == "Fireball") {
-			health--;
-			Debug.Log("received hit : " + health);
-			healthIndicator.localScale = new Vector3(
-				(health/maxHealth) * healthIndicatorX,
-				healthIndicator.localScale.y,
-				healthIndicator.localScale.z
-				);
+		if (col.gameObject.tag == "touchDestroy") {
 			Destroy(col.gameObject);
-			if (health == 0) {
-				Destroy(gameObject);
-			}
 		}
 	}
 

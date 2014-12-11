@@ -10,6 +10,6 @@ public class CoinsTxt : MonoBehaviour {
 	}
 
 	void Update() {
-		txtMesh.text = "Coins: " + MyCharacterController.coins;
+		txtMesh.text = "Coins: " + Upgrades.coins;
 	}
 }

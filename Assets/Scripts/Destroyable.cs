@@ -34,9 +34,16 @@ public class Destroyable : MonoBehaviour {
 						Instantiate(Resources.Load<GameObject>("1"), transform.position, Quaternion.identity);
 					} else if (roll < 50) {
 						Instantiate(Resources.Load<GameObject>("2"), transform.position, Quaternion.identity);
-					} else if (roll < 50) {
+					} else if (roll < 60) {
 						Instantiate(Resources.Load<GameObject>("3"), transform.position, Quaternion.identity);
+					} else if (roll < 70) {
+						Instantiate(Resources.Load<GameObject>("coin"), transform.position, Quaternion.identity);
 					}
+				} else {
+					int roll = Random.Range(0, 100);
+					if (roll < 10) {
+						Instantiate(Resources.Load<GameObject>("coin"), transform.position, Quaternion.identity);
+					} 
 				}
 				Destroy(gameObject);
 				//todo: play animation for destroying,

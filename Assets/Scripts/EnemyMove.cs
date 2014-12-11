@@ -6,8 +6,7 @@ public class EnemyMove : MonoBehaviour {
 
 	private GameObject target;
 	public float moveSpeed;
-	private float posY;
-	private float posX;
+
 	private float aggro = 10.0F;
 	public float attackRange = 5.0F;
 	private bool attacking = false;
@@ -17,7 +16,9 @@ public class EnemyMove : MonoBehaviour {
 	private bool AttackDelay = false;
 	public float tta = 2.5f;
 	public GameObject Fireball;
-	public float dizzy = 0;
+	public float dizzyTime = 2f;
+	float dizzy = 0;
+
 	public int initialDizzyFactor = 2;
 	public bool animate = false;
 	int dizzyFactor;
@@ -64,6 +65,9 @@ public class EnemyMove : MonoBehaviour {
 
 
 	void enemyMoveMethod() {
+		float posY = transform.position.y;
+		float posX = transform.position.x;
+		//transform.position += (target.transform.position - transform.position).normalized;
 
 		if(transform.position.y > target.transform.position.y) {
 			posY = transform.position.y - (moveSpeed/2);
@@ -74,7 +78,7 @@ public class EnemyMove : MonoBehaviour {
 
 		}
 
-
+	
 		if(transform.position.x > target.transform.position.x + 1) {
 			if(!StopXAxis) 
 				posX = transform.position.x - moveSpeed;
@@ -86,6 +90,12 @@ public class EnemyMove : MonoBehaviour {
 			direction = -1;
 		}
 
+		if(transform.position.x > target.transform.position.x + 1) {
+			direction = 1;
+		}
+		else if(transform.position.x < target.transform.position.x - 1) {
+			direction = -1;
+		}
 
 		transform.position = new Vector3(posX, posY, transform.position.z);
 	}
@@ -138,11 +148,13 @@ public class EnemyMove : MonoBehaviour {
 		    && ((direction > 0 && transform.position.x > pos.x)
 		    || (direction < 0 && transform.position.x < pos.x))) {
 			dizzyFactor--;
+			rigidbody2D.AddForce(new Vector2(direction*damage*10f, 0), ForceMode2D.Impulse);
 			if (dizzyFactor == 0) {
-				dizzy = 2f;
-				Destroy(
-				Instantiate(Resources.Load<GameObject>("dizzy"), transform.position - new Vector3(0, -2, 0), Quaternion.identity),
-					1.8f);
+				dizzy = dizzyTime;
+				GameObject dizzyObj = Instantiate(Resources.Load<GameObject>("dizzy"), transform.position - new Vector3(0, -2, 0), Quaternion.identity) as GameObject; 
+				dizzyObj.transform.parent = transform;
+				Destroy(dizzyObj,
+					dizzyTime - 0.2f);
 				dizzyFactor = initialDizzyFactor;
 
 			}
