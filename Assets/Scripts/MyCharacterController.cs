@@ -226,7 +226,9 @@ public class MyCharacterController : MonoBehaviour {
 			            0.5f + Random.Range(-0.1f, 0.2f),
 			            0)
 			                    , Quaternion.identity), 0.4f);
+			rigidbody2D.AddForce(new Vector2(-100, 0), ForceMode2D.Impulse);
 		}
+
 		if (health > maxHealth) {
 			health = maxHealth;
 		}

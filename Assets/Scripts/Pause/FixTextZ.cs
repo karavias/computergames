@@ -4,7 +4,7 @@ using System.Collections;
 public class FixTextZ : MonoBehaviour {
 
 	public bool copyParent = false;
-
+	public int parentOffset = 0;
 	// Use this for initialization
 	void Start () {
 		renderer.sortingLayerName= "front";
@@ -15,7 +15,7 @@ public class FixTextZ : MonoBehaviour {
 	void Update() {
 		if (copyParent) {
 			renderer.sortingLayerName = transform.parent.renderer.sortingLayerName;
-			renderer.sortingOrder = transform.parent.renderer.sortingOrder;
+			renderer.sortingOrder = transform.parent.renderer.sortingOrder + parentOffset;
 		}
 	}
 

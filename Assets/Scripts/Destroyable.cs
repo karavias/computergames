@@ -8,6 +8,10 @@ public class Destroyable : MonoBehaviour {
 	float initialMax;
 	public bool throwItem = false;
 	void Start() {
+		EnemyMove enMove = GetComponent<EnemyMove> ();
+		if (enMove != null) {
+			health = health * enMove.level;
+		}
 		anim = GetComponent<Animator> ();
 		GameEventManager.HitEvent += HandleHit;
 		initialMax = health;

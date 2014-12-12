@@ -22,7 +22,7 @@ public class EnemyMove : MonoBehaviour {
 	public int initialDizzyFactor = 2;
 	public bool animate = false;
 	int dizzyFactor;
-
+	public int level = 1;
 	// Use this for initialization
 	void Start () {
 		dizzyFactor = initialDizzyFactor;
@@ -31,6 +31,7 @@ public class EnemyMove : MonoBehaviour {
 		scaleX = transform.localScale.x;
 		moveSpeed = 0.06F;
 		GameEventManager.HitEvent += HandleHit;
+		transform.FindChild ("power").particleSystem.startSize = (float)(level - 1) / 10.0f;
 	}
 	
 	// Update is called once per frame
