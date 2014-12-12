@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.386803, y: 1.1209507, z: 0}
+  m_LocalPosition: {x: 112.35733, y: -2.43763113, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   live: 1
   child: 1
+  power: {fileID: 100010}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,7 +253,7 @@ MonoBehaviour:
   dizzyTime: 2
   initialDizzyFactor: 2
   animate: 0
-  level: 4
+  level: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -451,10 +452,10 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4278251007
+        rgba: 1040248319
       minMaxState: 0
     startSize:
-      scalar: .0299999993
+      scalar: .699999988
       maxCurve:
         serializedVersion: 2
         m_Curve:

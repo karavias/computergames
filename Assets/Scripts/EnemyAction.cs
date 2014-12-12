@@ -11,9 +11,13 @@ public class EnemyAction : MonoBehaviour {
 	}
 
 	public void TriggerHitEvent() {
+		Debug.Log ("Attacking triggering");
 		if (player == null || player.Equals(null)) {
 			return;
 		}
+		Debug.Log ("Attacking triggering player:: " + (Mathf.Abs(player.transform.position.x - transform.parent.position.x) < distanceX) + " -- " +
+		           (Mathf.Abs(player.transform.position.y - transform.parent.position.y) < distanceY));
+
 		if (Mathf.Abs(player.transform.position.x - transform.parent.position.x) < distanceX
 		    && Mathf.Abs(player.transform.position.y - transform.parent.position.y) < distanceY) {
 			player.GetComponent<MyCharacterController>().applyDamage(damage);

@@ -524,6 +524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   live: 1
   child: 1
+  power: {fileID: 100030}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -547,8 +548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
-  distanceY: 2
-  distanceX: 1
+  distanceY: 1
+  distanceX: 2
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -755,7 +756,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4278251007
+        rgba: 1040248319
       minMaxState: 0
     startSize:
       scalar: 0

@@ -186,15 +186,20 @@ public class MyCharacterController : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D col) {
 
 		if (col.gameObject.tag == "RitualRoom") {
-			if (jumping) {
-				return;
-			}
+
 			GameEventManager.TriggerEnteredRitualRoom();
 		} else if (col.gameObject.tag == "coin") {
 			Upgrades.AddCoin();
 			Destroy(col.gameObject);
 		}
 		if (col.gameObject.tag == "Fireball") {
+			if (jumping) {
+				return;
+			}
+			applyDamage(1);
+			Destroy(col.gameObject);
+		}
+		if (col.gameObject.tag == "Arrow") {
 			if (jumping) {
 				return;
 			}
@@ -218,8 +223,11 @@ public class MyCharacterController : MonoBehaviour {
 	}
 
 	public void applyDamage(int damage) {
-		health -= damage;
+		Debug.Log ("Applying damage for " + damage);
 		if (damage > 0) {
+			if (jumping) {
+				return;
+			}
 			Destroy(Instantiate(Resources.Load<GameObject>("pow"), 
 			                    transform.position +
 			                    new Vector3(Random.Range(-0.2f, 0.2f),
@@ -228,6 +236,8 @@ public class MyCharacterController : MonoBehaviour {
 			                    , Quaternion.identity), 0.4f);
 			rigidbody2D.AddForce(new Vector2(-100, 0), ForceMode2D.Impulse);
 		}
+		health -= damage;
+
 
 		if (health > maxHealth) {
 			health = maxHealth;

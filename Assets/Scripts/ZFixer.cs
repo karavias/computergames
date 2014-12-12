@@ -4,15 +4,19 @@ using System.Collections;
 public class ZFixer : MonoBehaviour {
 	public bool live = false;
 	public bool child = false;
+	public GameObject power;
 	// Use this for initialization
 	void Start () {
 		if (child) {
 			
 			foreach (SpriteRenderer rend in GetComponentsInChildren<SpriteRenderer>()) {
-				rend.sortingOrder = 1000 - (int)(transform.position.y * 100);	
+				rend.sortingOrder = 998 - (int)(transform.position.y * 100);	
 			}		
 		} else {
-			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
+			GetComponent<SpriteRenderer> ().sortingOrder = 998 - (int)(transform.position.y * 100);
+		}
+		if (power != null) {
+			power.particleSystem.renderer.sortingOrder = 1001 - (int)(transform.position.y * 100);
 		}
 		if (!live) {
 			enabled = false;
@@ -24,11 +28,14 @@ public class ZFixer : MonoBehaviour {
 		if (child) {
 
 			foreach (SpriteRenderer rend in GetComponentsInChildren<SpriteRenderer>()) {
-				rend.sortingOrder = 1000 - (int)(transform.position.y * 100);	
+				rend.sortingOrder = 998 - (int)(transform.position.y * 100);	
 			}
 		} else {
 
-			GetComponent<SpriteRenderer> ().sortingOrder = 1000 - (int)(transform.position.y * 100);
+			GetComponent<SpriteRenderer> ().sortingOrder = 998 - (int)(transform.position.y * 100);
+		}
+		if (power != null) {
+			power.particleSystem.renderer.sortingOrder = 1001 - (int)(transform.position.y * 100);
 		}
 	}
 }
