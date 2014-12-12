@@ -22,7 +22,6 @@ public class Destroyable : MonoBehaviour {
 		    && Mathf.Abs(pos.y - transform.position.y) < 1
 			&& ((direction > 0 && transform.position.x > pos.x)
 		    || (direction < 0 && transform.position.x < pos.x))) {
-			Debug.Log("received a hit");
 			health -= damage;
 			Destroy(Instantiate(Resources.Load<GameObject>("pow"), 
 			                    transform.position +
@@ -31,7 +30,7 @@ public class Destroyable : MonoBehaviour {
 			            					0)
 			                    , Quaternion.identity), 0.4f);
 			if (health <= 0) {
-				GameEventManager.HitEvent -= HandleHit;
+
 				if (throwItem) {
 					int roll = Random.Range(0, 100);
 					if (roll < 30) {
@@ -54,6 +53,10 @@ public class Destroyable : MonoBehaviour {
 				//and then destroy after 2-3 seconds.
 			}
 		}
+	}
+
+	void OnDestroy() {
+		GameEventManager.HitEvent -= HandleHit;
 	}
 
 	public float GetPercent() {

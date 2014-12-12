@@ -9,7 +9,6 @@ public class RitualEntered : MonoBehaviour {
 	}
 
 	void OnEnterRitualRoom() {
-		Debug.Log ("testing");
 		if (Timer.remainingTime > 0) {
 			//todo: disrupt rituals
 			Debug.Log("disrupt rituals");

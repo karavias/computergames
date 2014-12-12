@@ -196,17 +196,17 @@ public class MyCharacterController : MonoBehaviour {
 			if (jumping) {
 				return;
 			}
-			applyDamage(1);
+			applyDamage(1, Mathf.Sign(transform.position.x - col.transform.position.x));
 			Destroy(col.gameObject);
 		}
 		if (col.gameObject.tag == "Arrow") {
 			if (jumping) {
 				return;
 			}
-			applyDamage(1);
+			applyDamage(1, Mathf.Sign(transform.position.x - col.transform.position.x));
 		}
 		if (col.gameObject.tag == "healthup") {
-			applyDamage(-1);
+			applyDamage(-1, 1);
 			Destroy(col.gameObject);
 		}
 		if (col.gameObject.tag == "seller") {
@@ -222,8 +222,7 @@ public class MyCharacterController : MonoBehaviour {
 		}
 	}
 
-	public void applyDamage(int damage) {
-		Debug.Log ("Applying damage for " + damage);
+	public void applyDamage(int damage, float direction) {
 		if (damage > 0) {
 			if (jumping) {
 				return;
@@ -234,7 +233,7 @@ public class MyCharacterController : MonoBehaviour {
 			            0.5f + Random.Range(-0.1f, 0.2f),
 			            0)
 			                    , Quaternion.identity), 0.4f);
-			rigidbody2D.AddForce(new Vector2(-100, 0), ForceMode2D.Impulse);
+			rigidbody2D.AddForce(new Vector2(direction*100, 0), ForceMode2D.Impulse);
 		}
 		health -= damage;
 
@@ -245,7 +244,6 @@ public class MyCharacterController : MonoBehaviour {
 		if (health < 0) {
 			health = 0;
 		}
-		Debug.Log("received hit : " + health);
 
 
 		if (health <= 0) {

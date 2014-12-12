@@ -14,7 +14,11 @@ public class EnemyMove : MonoBehaviour {
 	private float scaleX;
 	private bool StopXAxis = false;
 	private bool AttackDelay = false;
+	bool specialAttackDelay = false;
+	public bool boss;
+	public bool hasSpecialAttack = false;
 	public float tta = 2.5f;
+	public float ttsa = 7f;
 	public GameObject Fireball;
 	public float dizzyTime = 2f;
 	float dizzy = 0;
@@ -23,8 +27,13 @@ public class EnemyMove : MonoBehaviour {
 	public bool animate = false;
 	int dizzyFactor;
 	public int level = 1;
+	bool targetSpotted = false;
+	bool spawn = true;
+	bool spawned = false;
+	float scaleY;
 	// Use this for initialization
 	void Start () {
+		scaleY = transform.localScale.y;
 		dizzyFactor = initialDizzyFactor;
 
 		target = GameObject.FindGameObjectWithTag("MyPlayer");
@@ -32,11 +41,40 @@ public class EnemyMove : MonoBehaviour {
 		moveSpeed = 0.06F;
 		GameEventManager.HitEvent += HandleHit;
 		transform.FindChild ("power").particleSystem.startSize = (float)(level - 1) / 10.0f;
+		if (boss) {
+			GameEventManager.EnteredRitualRoom += PlayerEnteredRoom;
+			collider2D.enabled = false;
+			transform.localScale = new Vector3(transform.localScale.x,
+			                                   0,
+			                                   transform.localScale.z);
+		}
 	}
-	
+
+	void PlayerEnteredRoom() {
+		if (Timer.remainingTime > 0) {
+			spawn = false;
+			Destroy(gameObject);
+		} else {
+			spawn = true;
+			iTween.ScaleTo(gameObject, iTween.Hash("y", scaleY, "time", 30f, "easyType", iTween.EaseType.linear,
+			                                       "oncomplete", "HandleSpawnComplete"));
+
+		}
+		GameEventManager.EnteredRitualRoom -= PlayerEnteredRoom;
+	}
+
+	public void HandleSpawnComplete() {
+		if (spawn) {
+			spawned = true;
+			collider2D.enabled = true;
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
-
+		if (boss && !spawned) {
+			return;
+		}
 		if (dizzy > 0) {
 			dizzy -= Time.deltaTime;
 			return;
@@ -45,8 +83,9 @@ public class EnemyMove : MonoBehaviour {
 			return;
 		}
 		float distance = Vector2.Distance (transform.position, target.transform.position);
-		if(distance < aggro)
+		if(targetSpotted || distance < aggro)
 		{
+			targetSpotted = true;
 			enemyMoveMethod();
 			if(distance < attackRange) 
 			{ 
@@ -54,6 +93,9 @@ public class EnemyMove : MonoBehaviour {
 				Attack(); 
 			} else {
 				StopXAxis = false;
+			}
+			if (hasSpecialAttack) {
+				SpecialAttack();
 			}
 		}
 		transform.localScale = new Vector3(direction*scaleX,
@@ -105,7 +147,6 @@ public class EnemyMove : MonoBehaviour {
 	{
 		if(!AttackDelay) {
 
-			Debug.Log ("Attacking!");
 
 			StartCoroutine(AttackWait());
 			if (Fireball != null) {
@@ -120,7 +161,17 @@ public class EnemyMove : MonoBehaviour {
 		}
 		
 	}
-	
+
+	void SpecialAttack() {
+		if(!specialAttackDelay) {
+			
+			Debug.Log ("Special Attacking!");
+			
+			StartCoroutine(SpecialAttackWait());
+				GetComponentInChildren<Animator>().SetTrigger("hitSpecial");
+
+		}
+	}
 	
 	//	public void AttackStarted() {
 //		attacking = true;
@@ -143,6 +194,13 @@ public class EnemyMove : MonoBehaviour {
 		AttackDelay = false;
 	}
 
+	IEnumerator SpecialAttackWait()
+	{
+		specialAttackDelay = true;
+		yield return new WaitForSeconds(ttsa);		
+		specialAttackDelay = false;
+	}
+
 	void HandleHit(Vector3 pos, float direction, float damage) {
 		if (Mathf.Abs (pos.x - transform.position.x) < 2
 		    && Mathf.Abs(pos.y - transform.position.y) < 1
@@ -161,6 +219,8 @@ public class EnemyMove : MonoBehaviour {
 			}
 		}
 	}
+
+
 
 	void OnDestroy() {
 		GameEventManager.HitEvent -= HandleHit;
