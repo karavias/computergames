@@ -84,7 +84,8 @@ public class MyCharacterController : MonoBehaviour {
 			return;
 		}
 
-		if (Input.GetKeyDown(KeyCode.Escape)) {
+		if (Input.GetKeyDown(KeyCode.Escape)
+		    && Time.timeScale != 0) {
 			Instantiate(Resources.Load<GameObject>("pause"),
 			            new Vector3(Camera.main.transform.position.x,
 			            			Camera.main.transform.position.y,
