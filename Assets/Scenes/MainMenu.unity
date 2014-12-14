@@ -555,8 +555,8 @@ GUIText:
   m_GameObject: {fileID: 1913479580}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: "Z : jump\r\nX : attack\r\nArrows: move\r\nC : upgrade when you are near
-    a shop"
+  m_Text: "Z : jump\r (avoid attacks by jumping)\nX : attack\r\nArrows: move\r\nC
+    : upgrade when you are near a shop"
   m_Anchor: 8
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}

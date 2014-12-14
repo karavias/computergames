@@ -141,6 +141,9 @@ public class EnemyMove : MonoBehaviour {
 	 * and check if the unit should attack.
 	 **/
 	void Update () {
+		if (Time.timeScale == 0) {
+			return;
+		}
 		//if is boss but not spawned. Do nothing.
 		if (boss && !spawned) {
 			return;

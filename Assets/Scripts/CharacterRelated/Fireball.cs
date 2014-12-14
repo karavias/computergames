@@ -33,6 +33,9 @@ public class Fireball : MonoBehaviour {
 	 * On every frame update the X position of the fireball (or arrow)
 	 **/
 	void Update () {
+		if (Time.timeScale == 0) {
+			return;
+		}
 		posX += (direction/10);
 		transform.position = new Vector2(posX, transform.position.y);
 	}

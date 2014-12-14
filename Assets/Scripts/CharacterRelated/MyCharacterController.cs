@@ -279,7 +279,7 @@ public class MyCharacterController : MonoBehaviour {
 		//if the character is near the shop. Enable shop.
 		if (col.gameObject.tag == "seller") {
 			canShop = true;
-			helpText.text = "Press C to buy upgrades";
+			helpText.text = "Press C to buy upgrades, and again C to close the shop";
 		}
 	}
 
