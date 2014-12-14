@@ -1,16 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This component is used by the upgrade panel
+ * to display information about the upgrades
+ * and provides functiality to purchase and upgrade.
+ **/
 public class UpgradeAllMethods : MonoBehaviour {
+	//indicator if this object shows the defence level.
 	public bool showHealth;
+	//indicator if this object shows the attack level.
 	public bool showDamage;
+	//indicator if it this object shows the defence upgrade cost.
 	public bool showHealthCost;
+	//indicator if this object sohws the attack upgrade cost.
 	public bool showDamageCost;
+	//indicator if this object is the upgrade button for defence.
 	public bool clickHealth;
+	//indicator if this object is the upgrade button for attack.
 	public bool clickDamage;
+	//reference to the help text gui Texture.
 	GUIText txt;
+	//reference to the player's gameobject.
 	GameObject player;
-	// Use this for initialization
+
+	/**
+	 * Initialize and show information about the levels and costs.
+	 **/
 	void Start () {
 		player = GameObject.FindWithTag ("MyPlayer");
 		txt = GameObject.Find ("helpText").GetComponent<GUIText> ();
@@ -26,6 +42,10 @@ public class UpgradeAllMethods : MonoBehaviour {
 
 	}
 
+	/**
+	 * If it is an upgrade button.
+	 * Handle it here.
+	 **/
 	void OnMouseDown() {
 		if (clickHealth) {
 			if (!Upgrades.UpgradeHealth()) {

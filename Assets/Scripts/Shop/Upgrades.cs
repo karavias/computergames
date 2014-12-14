@@ -1,13 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This component is used to store the 
+ * defence and attack levels and the coins.
+ **/
 public class Upgrades : MonoBehaviour {
 
+	//indicator for the defence level.
 	public static int health;
+	//indicator for the attack level.
 	public static int damage;
+	//indicator for the coins the player has.
 	public static int coins;
 
-	// Use this for initialization
+	/**
+	 * Initialize variables.
+	 **/
 	void Start () {
 		if (!PlayerPrefs.HasKey ("health")) {
 			PlayerPrefs.SetInt("health", 1);
@@ -23,12 +32,18 @@ public class Upgrades : MonoBehaviour {
 		coins = PlayerPrefs.GetInt ("coins");
 	}
 
-	
+	/**
+	 * This method adds increases the coins by one.
+	 **/
 	public static void AddCoin() {
 		coins++;
 		PlayerPrefs.SetInt ("coins", coins);
 	}
 
+	/**
+	 * This method upgrades the defence level
+	 * after checking that the available number of coins exists.
+	 **/
 	public static bool UpgradeHealth() {
 		if (health*10 > coins) {
 			return false;
@@ -40,7 +55,10 @@ public class Upgrades : MonoBehaviour {
 		return true;
 	}
 
-
+	/**
+	 * This method upgrades the attack level
+	 * after checking that the available number of coins exists.
+	 **/
 	public static bool UpgradeDamage() {
 		if (damage * 10 > coins) {
 			return false;

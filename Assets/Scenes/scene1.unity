@@ -72882,7 +72882,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1612211088}
-  - 114: {fileID: 1612211089}
   m_Layer: 0
   m_Name: LeftestCharacter
   m_TagString: Untagged
@@ -72902,17 +72901,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1380415839}
   m_RootOrder: 4
---- !u!114 &1612211089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612211087}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89bc49dbaede26d46925dfbd6d2533b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1613950092
 GameObject:
   m_ObjectHideFlags: 0
@@ -96094,6 +96082,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2132023076}
+  - 114: {fileID: 2132023077}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -96114,6 +96103,17 @@ Transform:
   - {fileID: 950966345}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &2132023077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132023075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a468761aff48a045acee02be4478692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2136983174
 GameObject:
   m_ObjectHideFlags: 0
