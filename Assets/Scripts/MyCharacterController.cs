@@ -204,6 +204,7 @@ public class MyCharacterController : MonoBehaviour {
 				return;
 			}
 			applyDamage(1, Mathf.Sign(transform.position.x - col.transform.position.x));
+			Destroy (col.gameObject);
 		}
 		if (col.gameObject.tag == "healthup") {
 			applyDamage(-1, 1);

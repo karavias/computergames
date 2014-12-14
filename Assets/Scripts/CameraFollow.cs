@@ -59,7 +59,7 @@ public class CameraFollow : MonoBehaviour {
 			leftestChar.transform.position = new Vector3 (worldPos.x, 0, 0);
 			lastPos = transform.position;
 		}
-		Debug.Log ("campos? " + lastPos);
+		//Debug.Log ("campos? " + lastPos);
 		if (shake) {
 			transform.position = lastPos + new Vector3(Random.Range(-0.1f, 0.1f),
 			                                  Random.Range(-0.1f, 0.1f),
