@@ -17,7 +17,7 @@ TagManager:
   - seller
   - shop
   - Arrow
-  - 
+  - finalEnemies
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -63,4 +63,8 @@ TagManager:
   - name: front
     userID: 2
     uniqueID: 871365075
+    locked: 0
+  - name: menu
+    userID: 3
+    uniqueID: 2412171497
     locked: 0

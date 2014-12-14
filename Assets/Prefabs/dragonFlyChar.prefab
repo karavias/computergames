@@ -56,7 +56,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100006
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -110,11 +110,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 112.35733, y: -2.43763113, z: 0}
+  m_LocalPosition: {x: 2.06803894, y: -1.04498124, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
-  - {fileID: 400006}
   - {fileID: 400008}
   - {fileID: 400010}
   m_Father: {fileID: 0}
@@ -128,7 +127,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .975227296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 400006}
   m_Father: {fileID: 400000}
   m_RootOrder: 0
 --- !u!4 &400004
@@ -150,12 +150,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.96000004, z: 0}
+  m_LocalPosition: {x: 0, y: .984772742, z: 0}
   m_LocalScale: {x: .501808047, y: .501808047, z: .535371721}
   m_Children:
   - {fileID: 400004}
-  m_Father: {fileID: 400000}
-  m_RootOrder: 1
+  m_Father: {fileID: 400002}
+  m_RootOrder: 0
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -167,7 +167,7 @@ Transform:
   m_LocalScale: {x: .388868928, y: .388868928, z: .388868928}
   m_Children: []
   m_Father: {fileID: 400000}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -179,7 +179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!50 &5000000
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -248,12 +248,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   attackRange: 5
+  boss: 0
+  hasSpecialAttack: 0
   tta: 2.5
+  ttsa: 7
   Fireball: {fileID: 100000, guid: f03fe75061537834489362ef0f76de84, type: 2}
   dizzyTime: 2
   initialDizzyFactor: 2
   animate: 0
-  level: 1
+  level: 6
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

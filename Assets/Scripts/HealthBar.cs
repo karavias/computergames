@@ -7,8 +7,8 @@ public class HealthBar : MonoBehaviour {
 	Transform root;
 	// Use this for initialization
 	void Start () {
-		root = transform.root;
-		destr = transform.root.GetComponent<Destroyable> ();
+		root = transform.parent.parent.parent;
+		destr = root.GetComponent<Destroyable> ();
 		initX = transform.localScale.x;
 
 	}

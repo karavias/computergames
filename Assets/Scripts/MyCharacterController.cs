@@ -203,7 +203,7 @@ public class MyCharacterController : MonoBehaviour {
 			if (jumping) {
 				return;
 			}
-			applyDamage(1, Mathf.Sign(transform.position.x - col.transform.position.x));
+			applyDamage(2, Mathf.Sign(transform.position.x - col.transform.position.x));
 			Destroy (col.gameObject);
 		}
 		if (col.gameObject.tag == "healthup") {
