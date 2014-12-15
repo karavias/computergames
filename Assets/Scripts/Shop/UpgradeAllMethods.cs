@@ -30,6 +30,11 @@ public class UpgradeAllMethods : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindWithTag ("MyPlayer");
 		txt = GameObject.Find ("helpText").GetComponent<GUIText> ();
+
+
+	}
+
+	void Update() {
 		if (showHealth) {
 			GetComponent<TextMesh> ().text = "Current level : " + Upgrades.health;
 		} else if (showDamage) {
@@ -39,7 +44,6 @@ public class UpgradeAllMethods : MonoBehaviour {
 		} else if (showDamageCost) {
 			GetComponent<TextMesh>().text = "Upgrade for " + (Upgrades.damage * 10) + " coins";
 		}
-
 	}
 
 	/**
