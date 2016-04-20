@@ -15,8 +15,8 @@ public class FixTextZ : MonoBehaviour {
 	 * Initialize the sorting layer and order with default values.
 	 **/
 	void Start () {
-		renderer.sortingLayerName= "front";
-		renderer.sortingOrder = 3;
+		GetComponent<Renderer>().sortingLayerName= "front";
+		GetComponent<Renderer>().sortingOrder = 3;
 
 	}
 
@@ -26,8 +26,8 @@ public class FixTextZ : MonoBehaviour {
 	 **/
 	void Update() {
 		if (copyParent) {
-			renderer.sortingLayerName = transform.parent.renderer.sortingLayerName;
-			renderer.sortingOrder = transform.parent.renderer.sortingOrder + parentOffset;
+			GetComponent<Renderer>().sortingLayerName = transform.parent.GetComponent<Renderer>().sortingLayerName;
+			GetComponent<Renderer>().sortingOrder = transform.parent.GetComponent<Renderer>().sortingOrder + parentOffset;
 		}
 	}
 

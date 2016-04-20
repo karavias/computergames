@@ -15,7 +15,7 @@ public class ParticleZFixer : MonoBehaviour {
 	 * with the one the parent has.
 	 **/
 	void Update () {
-		particleSystem.renderer.sortingLayerName = transform.parent.renderer.sortingLayerName;
-		particleSystem.renderer.sortingOrder = transform.parent.renderer.sortingOrder;
+		GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingLayerName = transform.parent.GetComponent<Renderer>().sortingLayerName;
+		GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingOrder = transform.parent.GetComponent<Renderer>().sortingOrder;
 	}
 }

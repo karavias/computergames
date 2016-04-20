@@ -15,8 +15,8 @@ public class ZCustomFixer : MonoBehaviour {
 	 * Initialize the renderer with the layer name and order.
 	 **/
 	void Start () {
-		renderer.sortingLayerName = layerName;
-		renderer.sortingOrder = layerOrder;
+		GetComponent<Renderer>().sortingLayerName = layerName;
+		GetComponent<Renderer>().sortingOrder = layerOrder;
 	}
 	
 }

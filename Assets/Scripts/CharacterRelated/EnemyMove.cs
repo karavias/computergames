@@ -97,10 +97,10 @@ public class EnemyMove : MonoBehaviour {
 		scaleX = transform.localScale.x;
 		moveSpeed = 0.06F;
 		GameEventManager.HitEvent += HandleHit;
-		transform.FindChild ("power").particleSystem.startSize = (float)(level - 1) / 10.0f;
+		transform.FindChild ("power").GetComponent<ParticleSystem>().startSize = (float)(level - 1) / 10.0f;
 		if (boss) {
 			GameEventManager.EnteredRitualRoom += PlayerEnteredRoom;
-			collider2D.enabled = false;
+			GetComponent<Collider2D>().enabled = false;
 			transform.localScale = new Vector3(transform.localScale.x,
 			                                   0,
 			                                   transform.localScale.z);
@@ -132,7 +132,7 @@ public class EnemyMove : MonoBehaviour {
 	public void HandleSpawnComplete() {
 		if (spawn) {
 			spawned = true;
-			collider2D.enabled = true;
+			GetComponent<Collider2D>().enabled = true;
 		}
 	}
 
@@ -296,7 +296,7 @@ public class EnemyMove : MonoBehaviour {
 			//reduce the number of hits to get dizzy.
 			dizzyFactor--;
 			//throw the unit back from the hit.
-			rigidbody2D.AddForce(new Vector2(direction*damage*10f, 0), ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(direction*damage*10f, 0), ForceMode2D.Impulse);
 			//if the unit received enough hits to get dizzy.
 			//initialize dizzyness
 			if (dizzyFactor == 0) {

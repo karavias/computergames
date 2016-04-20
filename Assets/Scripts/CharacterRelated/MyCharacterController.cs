@@ -102,7 +102,7 @@ public class MyCharacterController : MonoBehaviour {
 	 * It is more visible when you increase levels.
 	 **/
 	public void UpdatePowerColor() {
-		power.particleSystem.startSize = (Upgrades.health + Upgrades.damage) * 0.05f;
+		power.GetComponent<ParticleSystem>().startSize = (Upgrades.health + Upgrades.damage) * 0.05f;
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class MyCharacterController : MonoBehaviour {
 		//update all the sprite renderers of the character according to the y position.
 		foreach (SpriteRenderer rend in GetComponentsInChildren<SpriteRenderer>()) {
 			rend.sortingOrder = 1000 - (int)(transform.position.y * 100);
-			power.renderer.sortingOrder = rend.sortingOrder;
+			power.GetComponent<Renderer>().sortingOrder = rend.sortingOrder;
 		}
 
 
@@ -310,7 +310,7 @@ public class MyCharacterController : MonoBehaviour {
 			            0)
 			                    , Quaternion.identity), 0.4f);
 			//add force to throw character a bit away from the collision.
-			rigidbody2D.AddForce(new Vector2(direction*100, 0), ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(direction*100, 0), ForceMode2D.Impulse);
 		}
 		//calculate new health.
 		health -= damage;

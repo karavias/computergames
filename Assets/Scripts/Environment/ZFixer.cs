@@ -32,7 +32,7 @@ public class ZFixer : MonoBehaviour {
 		if (power != null) {
 			//if the gameobject has a power particle system.
 			//update also the particle system.
-			power.particleSystem.renderer.sortingOrder = 1001 - (int)(transform.position.y * 100);
+			power.GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingOrder = 1001 - (int)(transform.position.y * 100);
 		}
 		//if we don't want live update. Disable component.
 		if (!live) {
@@ -54,7 +54,7 @@ public class ZFixer : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().sortingOrder = 998 - (int)(transform.position.y * 100);
 		}
 		if (power != null) {
-			power.particleSystem.renderer.sortingOrder = 1001 - (int)(transform.position.y * 100);
+			power.GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingOrder = 1001 - (int)(transform.position.y * 100);
 		}
 	}
 }
